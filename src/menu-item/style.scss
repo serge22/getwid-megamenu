@@ -41,6 +41,7 @@
 
     &__link {
         display: flex;
+        position: relative;
 
         a {
             display: block;
@@ -81,6 +82,12 @@
             background: inherit;
             box-shadow: none;
         }
+    }
+
+    svg.caret-down {
+        fill: currentColor;
+        height: 1em;
+        width: 1em;
     }
 
     &.has-children {
