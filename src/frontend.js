@@ -74,6 +74,14 @@
 					let dropdown = $(this).closest('.gw-mm-item').find('.gw-mm-item__dropdown-wrapper');
 					toggleMobileMenu($(this), $(dropdown));
 				});
+
+				$(menu).on('click', '.has-children > .gw-mm-item__link a', function(event) {
+					if ('#' === $(this).attr('href')) {
+						let dropdown = $(this).closest('.gw-mm-item').find('.gw-mm-item__dropdown-wrapper');
+						toggleMobileMenu($(this), $(dropdown));
+						return false;
+					}
+				})
 			});
 		}
 
